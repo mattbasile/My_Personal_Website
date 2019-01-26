@@ -10,7 +10,7 @@ class App extends Component {
   constructor(){
     super();
     this.state={
-      navItems: data.Navigation,
+      navItems: []
     }
   }
   componentDidMount(){
