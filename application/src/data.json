@@ -1,0 +1,25 @@
+{
+    "Navigation":[
+        {
+            "id": 0,
+            "title": "Profile",
+            "icon": "fas fa-user-circle"
+        },
+        {
+            "id": 1,
+            "title": "Work Experience",
+            "icon": "far fa-address-card"
+        },
+        {
+            "id": 2,
+            "title": "Portfolio",
+            "icon": "fas fa-code"
+
+        },
+        {
+            "id": 3,
+            "title": "Articles",
+            "icon": "fab fa-medium"
+        }
+    ]
+}

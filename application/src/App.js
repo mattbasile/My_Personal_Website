@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import NavSquare from './components/NavSquare';
+import axios from 'axios'
+import data from './data.json'
+
+
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state={
+      navItems: data.Navigation,
+    }
+  }
+  componentDidMount(){
+   this.setState({navItems: data.Navigation})
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        {this.state.navItems.map(nav =>{
+          return <NavSquare title={nav.title} icon={nav.icon}/>
+        })}
       </div>
     );
   }
